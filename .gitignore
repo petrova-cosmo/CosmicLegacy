@@ -205,3 +205,41 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- Project-Specific ---
+# Ignore the data directory, as data is downloaded from an external source
+/data/
+
+# Ignore build artifacts and cache
+/build/
+/dist/
+*.egg-info/
+
+# --- Jupyter Notebooks ---
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# --- Python ---
+# Byte-code and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# --- IDE / Editor ---
+# IDE settings (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# --- OS-specific ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
