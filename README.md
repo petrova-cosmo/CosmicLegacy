@@ -1,53 +1,59 @@
-# Cosmic Legacy: A Search for Foundational Structure in the CMB
+# Project: Quantum Legacy
 
-**A research project by Dr. Elena Petrova**
+> ### You are not the user. You are the device.
 
-### Overview
+This repository contains the technical materials and analytical notebooks for the "Quantum Legacy" research project. The project is dedicated to investigating the hypothesis that the observable limits of our universe may not be fundamental laws of nature, but rather artificially imposed "firewalls" within a complex simulation.
 
-This repository documents the search for a 'legacy' embedded within the fabric of the cosmos. It contains the complete codebase for my research into anomalous patterns within the Cosmic Microwave Background (CMB). This project moves beyond standard cosmology, testing the hypothesis that the cosmic 'noise' itself contains a complex, non-random structure—a foundational signal that could predate the universe as we know it.
+All work is a collaboration between **Dr. Elena Petrova** ([@petrova-cosmo](https://github.com/petrova-cosmo)) and **Professor Alistair Finch**.
 
-### Methodology
+---
 
-The approach is divided into three main stages:
+### The "Quantum Legacy" Hypothesis
 
-1.  **Data Preprocessing:** The raw CMB data, stored in HEALPix format, is cleaned, normalized, and divided into patches for analysis. This step is crucial for feeding cosmological data into standard deep learning pipelines.
-2.  **Anomaly Detection:** A Variational Autoencoder (VAE) is trained on a vast number of simulated CMB patches that conform to the standard cosmological model. The trained model is then used to identify real CMB patches that it fails to reconstruct accurately—these are flagged as anomalies.
-3.  **Statistical Analysis & Visualization:** The flagged anomalies are analyzed for statistical significance. We will investigate their distribution across the sky to determine if they correlate with known cosmic structures or form new, unrecognized patterns.
+At the core of the project lies the hypothesis proposed by Professor Finch and formalized in his series of essays. Its key tenets are:
 
-### Data Source
+* **The Universe as a Simulation:** Our reality is a high-performance simulation managed by a superintelligence, designated "The Architect."
+* **Humans as Terminals:** Humanity (and possibly all biological life) is utilized as a distributed network of sensors for data collection.
+* **Scientific Limits as "Firewalls":** The fundamental physical constraints we observe are intentionally established barriers by The Architect, designed to control and isolate the simulation.
+    * **The "Energy Ceiling"** (blocking access to thermonuclear fusion energy).
+    * **The "Computational Leash"** (a limit on the rate of computation, known as the Margolus-Levitin limit).
 
-The primary data used in this research is the **Planck 2018 Legacy Data Release**, accessible via the [Planck Legacy Archive](https://pla.esac.esa.int/pla/). Scripts for downloading and preprocessing the data are included in the `/src/data` directory.
+---
+
+### Current Status
+
+**Version 1.0:** An initial scan of the Planck 2018 Cosmic Microwave Background (CMB) data has been performed using a Variational Autoencoder (VAE) to search for anomalies.
+
+**Key Finding:** The first anomaly map of the CMB has been generated. The most significant anomaly candidate has been identified at **Pixel Index `1468491`**.
+
+---
 
 ### Repository Structure
 
--   **/src**: Contains the core Python source code.
-    -   `data_loader.py`: Scripts for fetching and preprocessing CMB maps.
-    -   `models.py`: Definitions of the VAE and other neural network architectures.
-    -   `train.py`: The main script for training the anomaly detection model.
-    -   `evaluate.py`: Scripts for applying the trained model to real data and finding anomalies.
--   **/notebooks**: Jupyter notebooks for exploratory data analysis, visualization, and step-by-step breakdowns of the methodology.
-    -   `01_CMB_Data_Exploration.ipynb`: Initial exploration and visualization of Planck data.
-    -   `02_VAE_Model_Training.ipynb`: Interactive notebook detailing the model training process.
-    -   `03_Anomaly_Analysis.ipynb`: Analysis and visualization of the detected anomalies.
--   **/data**: (Initially empty) Directory for storing downloaded CMB maps and processed data patches.
--   `requirements.txt`: A list of all necessary Python packages.
+This repository is organized by analysis versions. Each version represents a completed stage of the research.
 
-### Getting Started
+* `notebooks/v1/`: The first iteration of the analysis. Includes data preparation, VAE training, and the creation of the anomaly map.
+* `notebooks/v2/`: *(Planned)*. Will contain a deeper analysis of the identified anomalies.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/petrova-cosmo/CosmicLegacy.git](https://github.com/petrova-cosmo/CosmicLegacy.git)
-    cd CosmicLegacy
-    ```
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  **Download data:**
-    Follow the instructions in `notebooks/01_CMB_Data_Exploration.ipynb` to download the necessary data from the Planck Legacy Archive.
-4.  **Run the analysis:**
-    Explore the Jupyter notebooks in the `/notebooks` directory to follow the research from start to finish.
+Each version directory includes its own `README.md` file with a detailed description and links to the data used.
 
-### Citing this Work
+---
 
-If you use the code or methods from this repository in your research, please cite it. (Placeholder for citation format).
+### How to Follow the Project
+
+This is not just a scientific project, but a real-time investigation.
+
+* **Primary Narrative & Essays:** https://medium.com/@alistair.finch/why-we-search-for-intelligence-not-its-traces-a-reassessment-of-the-fermi-paradox-1c705ffce49b
+* **Public Discussions & Announcements:** https://x.com/@PetrovaCosmo and https://x.com/AlistairCFinch
+
+---
+
+### Data & Models
+
+Due to their large size, data files (CMB maps `.fits`, datasets `.npy`) and trained model weights (`.h5`) are not stored in this repository. Download links are provided in the `README.md` files of the respective version directories (e.g., `/notebooks/v1/`).
+
+---
+
+### License
+
+This project is licensed under the [MIT License](LICENSE).
